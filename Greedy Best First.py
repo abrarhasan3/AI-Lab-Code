@@ -48,6 +48,7 @@ while current[2]!=goal:
             hp.heappush(heap, (f,t_cost,item,path))
     visited+=[current[2]]
     current=heap[0]
+    print("Selected:",current[2],current[0])
     hp.heappop(heap)
     
 

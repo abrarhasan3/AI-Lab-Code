@@ -36,10 +36,12 @@ while current[2]!=goal:
     
     for item in graph[current[2]]:
         if (item in visited)==False:
+            #print(item)
             cost = graph[current[2]].get(item)
             h_x = hsld.get(item)
             f = cost + h_x + current[1]
             t_cost = current[1]+cost
+            
             path = current[3][:]
             if (current[2] in path)==False:
                 path+=[current[2]]
@@ -47,6 +49,8 @@ while current[2]!=goal:
         
     visited+=[current[2]]
     current=heap[0]
+    #print("Available Cities",heap)
+    print("Selected:",current[2],current[0])
     hp.heappop(heap)
     
 
