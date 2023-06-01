@@ -31,28 +31,22 @@ current = (hsld.get(start),0,start,[])
 goal = 'Bucharest'
 visited+=[current[2]]
 
-path1 = {}
-
-
 while current[2]!=goal:
-    #print(current)
-    temp = []
+    
+    
     for item in graph[current[2]]:
         if (item in visited)==False:
-            
             cost = graph[current[2]].get(item)
             h_x = hsld.get(item)
             f = cost + h_x + current[1]
             t_cost = current[1]+cost
             path = current[3][:]
-            path1[item]=[]+[current[2]]
             if (current[2] in path)==False:
                 path+=[current[2]]
             hp.heappush(heap, (f,t_cost,item,path))
         
     visited+=[current[2]]
     current=heap[0]
-    
     hp.heappop(heap)
     
 
