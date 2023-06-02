@@ -1,13 +1,8 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on Mon May 15 08:50:35 2023
 
-@author: kanizfatema
+@author: abrar
 """
-
-def getMembershipService(service):
-    print("HI")
     
 def speed(food):
     
@@ -80,7 +75,7 @@ def defuzzificationAssessment(cheap,average,generous ):
 
 #input
 
-relative,sp = 1, 30
+relative,sp = 35, 30
 
 
 
@@ -101,7 +96,7 @@ i=10
 down=0
 COG = 0
 while(i<=100):
-    if(i<=30):
+    if(i<30):
         COG=COG + i*rule5
         down=down+rule5
     elif(i<=60):
